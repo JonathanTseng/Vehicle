@@ -103,6 +103,14 @@ public class VehicleContext {
 		currentState.acceleratorApplied();
 	}
 
+	// Not sure if this is necessary yet
+	/**
+	 * Process vehicle coming to a stop
+	 */
+	public void vehicleStopped() {
+		currentState.vehicleStopped();
+	}
+
 	/**
 	 * This invokes the right method of the display. This helps protect the states
 	 * from changes to the way the system utilizes the state changes.

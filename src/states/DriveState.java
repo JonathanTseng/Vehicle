@@ -39,8 +39,7 @@ public class DriveState extends VehicleState {
 	 */
 	@Override
 	public void acceleratorApplied() {
-		// change to accelerator state
-		// VehicleContext.instance().changeState(AcceleratingState.instance());
+		VehicleContext.instance().changeState(AcceleratingState.instance());
 	}
 
 	/**

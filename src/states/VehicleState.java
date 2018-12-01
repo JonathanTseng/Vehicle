@@ -70,7 +70,7 @@ public abstract class VehicleState {
 	/**
 	 * Process clock ticks Generates the timer runs out event
 	 */
-	public void timerRanOut() {
+	public void vehicleStopped() {
 
 	}
 
