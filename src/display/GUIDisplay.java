@@ -152,6 +152,7 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 		speedStatus.setText(" " + speed);
 	}
 
+	// re-write with sub-classes instead of conditionals
 	@Override
 	public void handle(ActionEvent event) {
 		if (event.getSource().equals(offButton)) {

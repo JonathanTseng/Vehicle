@@ -1,7 +1,7 @@
 package states;
 
 /**
- * Represents the door opened state
+ * Represents the off state
  *
  */
 public class OffState extends VehicleState {
@@ -27,8 +27,8 @@ public class OffState extends VehicleState {
 	}
 
 	@Override
-	public void turnOff() {
-		VehicleContext.instance().changeState(OffState.instance());
+	public void turnOn() {
+		VehicleContext.instance().changeState(OnInParkState.instance());
 	}
 
 	/**
