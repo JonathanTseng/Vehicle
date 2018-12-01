@@ -19,14 +19,14 @@ public abstract class VehicleState {
 	/**
 	 * Specifies the actions to be taken when the Off button is pressed.
 	 */
-	public void turnedOff() {
+	public void turnOff() {
 
 	}
 
 	/**
 	 * Specifies the actions to be taken when the On button is pressed.
 	 */
-	public void turnedOn() {
+	public void turnOn() {
 
 	}
 

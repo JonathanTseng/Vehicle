@@ -10,7 +10,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
-import states.MicrowaveContext;
+import states.VehicleContext;
 
 /**
  * GUI to implement the VehicleDisplay interface A pretty elementary interface
@@ -29,8 +29,7 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 	private Text pedalStatus = new Text("Brake pedal being pressed");
 	private static VehicleDisplay display;
 
-	// Change once VehicleContext is created
-	private MicrowaveContext microwaveContext;
+	private VehicleContext microwaveContext;
 
 	public static VehicleDisplay getInstance() {
 		return display;
@@ -41,7 +40,7 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 	 */
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		microwaveContext = MicrowaveContext.instance();
+		microwaveContext = VehicleContext.instance();
 		microwaveContext.setDisplay(this);
 		display = this;
 
@@ -155,12 +154,18 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 
 	@Override
 	public void handle(ActionEvent event) {
-		if (event.getSource().equals(doorCloser)) {
-			MicrowaveContext.instance().doorClosed();
-		} else if (event.getSource().equals(doorOpener)) {
-			MicrowaveContext.instance().doorOpened();
-		} else if (event.getSource().equals(cookButton)) {
-			MicrowaveContext.instance().cookRequested();
+		if (event.getSource().equals(offButton)) {
+			VehicleContext.instance().turnOff();
+		} else if (event.getSource().equals(onButton)) {
+			VehicleContext.instance().turnOn();
+		} else if (event.getSource().equals(gearToPark)) {
+			VehicleContext.instance().changeGearToPark();
+		} else if (event.getSource().equals(gearToDrive)) {
+			VehicleContext.instance().changeGearToDrive();
+		} else if (event.getSource().equals(accelerator)) {
+			VehicleContext.instance().acceleratorApplied();
+		} else if (event.getSource().equals(brake)) {
+			VehicleContext.instance().brakeApplied();
 		}
 
 	}

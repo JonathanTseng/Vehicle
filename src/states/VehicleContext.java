@@ -64,15 +64,15 @@ public class VehicleContext {
 	/**
 	 * Process turn off request
 	 */
-	public void turnedOff() {
-		currentState.turnedOff();
+	public void turnOff() {
+		currentState.turnOff();
 	}
 
 	/**
 	 * Process turn on request
 	 */
-	public void turnedOn() {
-		currentState.turnedOn();
+	public void turnOn() {
+		currentState.turnOn();
 	}
 
 	/**
