@@ -18,7 +18,7 @@ public class VehicleContext {
 	 */
 	private VehicleContext() {
 		instance = this;
-		currentState = DoorClosedState.instance();
+		currentState = OffState.instance();
 	}
 
 	/**
@@ -47,7 +47,7 @@ public class VehicleContext {
 	 * for clock
 	 */
 	public void initialize() {
-		instance.changeState(DoorClosedState.instance());
+		instance.changeState(OffState.instance());
 	}
 
 	/**
