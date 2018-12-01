@@ -66,13 +66,16 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 		pane.add(gearToDrive, 7, 0);
 		pane.add(brake, 8, 0);
 		pane.add(accelerator, 9, 0);
-
-		showDoorClosed();
-		showLightOff();
-		showTimeLeft(0);
-		doorCloser.setOnAction(this);
-		doorOpener.setOnAction(this);
-		cookButton.setOnAction(this);
+		showVehicleOff();
+		showGearInPark();
+		showBrakePressed();
+		showVehicleSpeed(0);
+		offButton.setOnAction(this);
+		onButton.setOnAction(this);
+		gearToPark.setOnAction(this);
+		gearToDrive.setOnAction(this);
+		brake.setOnAction(this);
+		accelerator.setOnAction(this);
 		Scene scene = new Scene(pane);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Vehicle");
