@@ -1,11 +1,16 @@
 package states;
 
+import speedometer.BrakingSpeedometer;
+import speedometer.Notifiable;
+import speedometer.Speedometer;
+
 /**
  * Represents the braking state
  *
  */
-public class BrakingState extends VehicleState {
+public class BrakingState extends VehicleState implements Notifiable {
 	private static BrakingState instance;
+	private Speedometer speedometer;
 
 	/**
 	 * Private constructor for the singleton pattern
@@ -34,12 +39,21 @@ public class BrakingState extends VehicleState {
 		VehicleContext.instance().changeState(AcceleratingState.instance());
 	}
 
-	// not yet complete need to implement the braking process
+	/**
+	 * Process clock tick Generates the speedometer changes
+	 */
+	@Override
+	public void speedometerTicked(int speedValue) {
+		VehicleContext.instance().showVehicleSpeed(speedValue);
+		speed = speedValue;
+	}
+
 	/**
 	 * Change to the drive state after vehicle comes to a stop
 	 */
 	@Override
-	public void vehicleStopped() {
+	public void speedometerAtZero() {
+		VehicleContext.instance().showVehicleSpeed(0);
 		VehicleContext.instance().changeState(DriveState.instance());
 	}
 
@@ -49,6 +63,8 @@ public class BrakingState extends VehicleState {
 	 */
 	@Override
 	public void enter() {
+		speedometer = new BrakingSpeedometer(this, speed);
+		VehicleContext.instance().showVehicleSpeed(speedometer.getSpeedValue());
 		// VehicleContext.instance().showAcceleratorPressed();
 	}
 

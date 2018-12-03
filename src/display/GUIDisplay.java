@@ -149,7 +149,7 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 	 */
 	@Override
 	public void showVehicleSpeed(int speed) {
-		speedStatus.setText(" " + speed);
+		speedStatus.setText(speed + " mps");
 	}
 
 	// re-write with sub-classes instead of conditionals

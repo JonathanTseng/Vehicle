@@ -5,6 +5,7 @@ package states;
  *
  */
 public abstract class VehicleState {
+	protected static int speed;
 
 	/**
 	 * Initializes the state
@@ -62,7 +63,7 @@ public abstract class VehicleState {
 	/**
 	 * Process clock tick Generates the timer runs out event
 	 */
-	public void timerTicked(int timeLeft) {
+	public void speedometerTicked(int speed) {
 
 	}
 
@@ -70,7 +71,7 @@ public abstract class VehicleState {
 	/**
 	 * Process clock ticks Generates the timer runs out event
 	 */
-	public void vehicleStopped() {
+	public void speedometerAtZero() {
 
 	}
 
