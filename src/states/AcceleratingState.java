@@ -48,12 +48,13 @@ public class AcceleratingState extends VehicleState implements Notifiable {
 		speed = speedValue;
 	}
 
-	// can probably delete, should not change the state at all
-	@Override
-	public void speedometerAtZero() {
-		System.out.println("Max Speed");
-
-	}
+	/*
+	 * can probably delete, should not change the state at all
+	 * 
+	 * @Override public void speedometerAtZero() { System.out.println("Max Speed");
+	 * 
+	 * }
+	 */
 
 	/**
 	 * initialize the state

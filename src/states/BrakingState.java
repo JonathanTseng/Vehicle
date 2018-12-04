@@ -70,6 +70,8 @@ public class BrakingState extends VehicleState implements Notifiable {
 
 	@Override
 	public void leave() {
+		speedometer.stop();
+		speedometer = null;
 		// VehicleContext.instance().showBrakePressed();
 	}
 
