@@ -1,7 +1,6 @@
 package display;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -16,7 +15,7 @@ import states.VehicleContext;
  * GUI to implement the VehicleDisplay interface A pretty elementary interface
  *
  */
-public class GUIDisplay extends Application implements VehicleDisplay, EventHandler<ActionEvent> {
+public class GUIDisplay extends Application implements VehicleDisplay {
 	private Button offButton;
 	private Button onButton;
 	private Button gearToPark;
@@ -44,12 +43,12 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 		microwaveContext.setDisplay(this);
 		display = this;
 
-		offButton = new Button("Turn Off");
-		onButton = new Button("Turn On");
-		gearToPark = new Button("Park");
-		gearToDrive = new Button("Drive");
-		brake = new Button("Brake");
-		accelerator = new Button("Accelerator");
+		offButton = new OffButton("Turn Off");
+		onButton = new OnButton("Turn On");
+		gearToPark = new ParkButton("Park");
+		gearToDrive = new DriveButton("Drive");
+		brake = new BrakeButton("Brake");
+		accelerator = new AcceleratorButton("Accelerator");
 
 		GridPane pane = new GridPane();
 		pane.setHgap(10);
@@ -69,12 +68,6 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 		showGearInPark();
 		showBrakePressed();
 		showVehicleSpeed(0);
-		offButton.setOnAction(this);
-		onButton.setOnAction(this);
-		gearToPark.setOnAction(this);
-		gearToDrive.setOnAction(this);
-		brake.setOnAction(this);
-		accelerator.setOnAction(this);
 		Scene scene = new Scene(pane);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Vehicle");
@@ -150,25 +143,6 @@ public class GUIDisplay extends Application implements VehicleDisplay, EventHand
 	@Override
 	public void showVehicleSpeed(int speed) {
 		speedStatus.setText(speed + " mps");
-	}
-
-	// re-write with sub-classes instead of conditionals
-	@Override
-	public void handle(ActionEvent event) {
-		if (event.getSource().equals(offButton)) {
-			VehicleContext.instance().turnOff();
-		} else if (event.getSource().equals(onButton)) {
-			VehicleContext.instance().turnOn();
-		} else if (event.getSource().equals(gearToPark)) {
-			VehicleContext.instance().changeGearToPark();
-		} else if (event.getSource().equals(gearToDrive)) {
-			VehicleContext.instance().changeGearToDrive();
-		} else if (event.getSource().equals(accelerator)) {
-			VehicleContext.instance().acceleratorApplied();
-		} else if (event.getSource().equals(brake)) {
-			VehicleContext.instance().brakeApplied();
-		}
-
 	}
 
 }
