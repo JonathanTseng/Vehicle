@@ -34,9 +34,9 @@ public class Speedometer implements PropertyChangeListener {
 	 *
 	 * @param value the increment (could be negative) for the time value.
 	 */
-	public void addTimeValue(int value) {
-		speed += value;
-	}
+	// public void addTimeValue(int value) {
+	// speed += value;
+	// }
 
 	/**
 	 * Stops the speedometer by deleting itself from the list of observers
