@@ -59,17 +59,15 @@ public abstract class VehicleState {
 
 	}
 
-	// May need to update to satisfy mps limits
 	/**
-	 * Process clock tick Generates the timer runs out event
+	 * Process clock tick Generates the speedometer ticked event
 	 */
 	public void speedometerTicked(int speed) {
 
 	}
 
-	// May need to update to when car comes to stop after braking
 	/**
-	 * Process clock ticks Generates the timer runs out event
+	 * Process clock ticks Generates the speedometer runs out event
 	 */
 	public void speedometerAtZero() {
 
