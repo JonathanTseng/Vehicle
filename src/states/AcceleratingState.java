@@ -43,20 +43,14 @@ public class AcceleratingState extends VehicleState implements Notifiable {
 
 	/**
 	 * Process clock tick Generates the speedometer changes
+	 * 
+	 * @param speedValue the speed the car is moving at
 	 */
 	@Override
 	public void speedometerTicked(int speedValue) {
 		VehicleContext.instance().showVehicleSpeed(speedValue);
 		speed = speedValue;
 	}
-
-	/*
-	 * can probably delete, should not change the state at all
-	 * 
-	 * @Override public void speedometerAtZero() { System.out.println("Max Speed");
-	 * 
-	 * }
-	 */
 
 	/**
 	 * initialize the state
@@ -70,7 +64,7 @@ public class AcceleratingState extends VehicleState implements Notifiable {
 	}
 
 	/**
-	 * Stopping the speemometer and updating the display.
+	 * Stopping the speedometer and updating the display.
 	 */
 	@Override
 	public void leave() {

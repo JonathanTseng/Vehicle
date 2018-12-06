@@ -59,7 +59,7 @@ public class DriveState extends VehicleState {
 	 */
 	@Override
 	public void leave() {
-		// VehicleContext.instance().showVehicleOn();
+
 	}
 
 }

@@ -25,8 +25,6 @@ public class BrakingSpeedometer extends Speedometer {
 	 */
 	@Override
 	public void propertyChange(PropertyChangeEvent arg0) {
-		// timeValue += 5;
-		// if (timeValue <= 0) {
 		if (--speed <= 0) {
 			client.speedometerAtZero();
 			Clock.instance().removePropertyChangeListener(this);

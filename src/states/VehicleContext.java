@@ -37,8 +37,7 @@ public class VehicleContext {
 	/**
 	 * The display could change. So we have to get its reference.
 	 * 
-	 * @param display
-	 *            The current display object
+	 * @param display The current display object
 	 */
 	public void setDisplay(VehicleDisplay display) {
 		this.display = display;
@@ -55,8 +54,7 @@ public class VehicleContext {
 	/**
 	 * Called from the states to change the current state
 	 * 
-	 * @param nextState
-	 *            the next state
+	 * @param nextState the next state
 	 */
 	public void changeState(VehicleState nextState) {
 		currentState.leave();
@@ -106,18 +104,11 @@ public class VehicleContext {
 		currentState.acceleratorApplied();
 	}
 
-	/*
-	 * // Not sure if this is necessary yet /** Process vehicle coming to a stop
-	 *
-	 * public void vehicleStopped() { currentState.vehicleStopped(); }
-	 */
-
 	/**
 	 * This invokes the right method of the display. This helps protect the states
 	 * from changes to the way the system utilizes the state changes.
 	 * 
-	 * @param speed
-	 *            the speed the vehicle is moving at
+	 * @param speed the speed the vehicle is moving at
 	 */
 	public void showVehicleSpeed(int speed) {
 		display.showVehicleSpeed(speed);

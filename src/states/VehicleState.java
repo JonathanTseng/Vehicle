@@ -62,7 +62,9 @@ public abstract class VehicleState {
 	}
 
 	/**
-	 * Process clock tick Generates the speedometer ticked event
+	 * Process clock tick Generates the speedometer changes
+	 * 
+	 * @param speed the speed the car is moving at
 	 */
 	public void speedometerTicked(int speed) {
 

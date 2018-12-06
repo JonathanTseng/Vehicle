@@ -43,6 +43,8 @@ public class BrakingState extends VehicleState implements Notifiable {
 
 	/**
 	 * Process clock tick Generates the speedometer changes
+	 * 
+	 * @param speedValue the speed the car is moving at
 	 */
 	@Override
 	public void speedometerTicked(int speedValue) {

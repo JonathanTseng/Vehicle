@@ -59,7 +59,7 @@ public class OnInParkState extends VehicleState {
 	 */
 	@Override
 	public void leave() {
-		// VehicleContext.instance().showVehicleOn();
+
 	}
 
 }
