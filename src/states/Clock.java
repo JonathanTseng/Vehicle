@@ -5,6 +5,8 @@ import java.util.Observable;
 /**
  * Implements a clock as a Runnable. Extends Observable to ease communication
  *
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
+ *
  */
 public class Clock extends Observable implements Runnable {
 	private static Clock instance;

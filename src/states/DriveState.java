@@ -3,6 +3,8 @@ package states;
 /**
  * Represents the drive state
  *
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
+ * 
  */
 public class DriveState extends VehicleState {
 	private static DriveState instance;
@@ -51,6 +53,10 @@ public class DriveState extends VehicleState {
 		VehicleContext.instance().showGearInDrive();
 	}
 
+	/**
+	 * Leaving the state.
+	 * 
+	 */
 	@Override
 	public void leave() {
 		// VehicleContext.instance().showVehicleOn();

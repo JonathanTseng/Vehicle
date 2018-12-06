@@ -3,7 +3,7 @@ package speedometer;
 /**
  * An entity that can be notified of clocked speedometer events
  * 
- * @author Stephen Thomas
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
  *
  */
 public interface Notifiable {

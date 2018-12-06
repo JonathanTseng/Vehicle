@@ -6,6 +6,8 @@ import speedometer.Speedometer;
 
 /**
  * Represents the accelerating state
+ * 
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
  *
  */
 public class AcceleratingState extends VehicleState implements Notifiable {
@@ -67,6 +69,9 @@ public class AcceleratingState extends VehicleState implements Notifiable {
 		VehicleContext.instance().showVehicleSpeed(speedometer.getSpeedValue());
 	}
 
+	/**
+	 * Stopping the speemometer and updating the display.
+	 */
 	@Override
 	public void leave() {
 		speedometer.stop();

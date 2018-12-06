@@ -8,7 +8,7 @@ import java.beans.PropertyChangeListener;
  * signals back to its creator every second and a timer runs out message when
  * the time period has elapsed.
  *
- * @author Stephen Thomas
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
  *
  */
 public class Speedometer implements PropertyChangeListener {
@@ -18,9 +18,10 @@ public class Speedometer implements PropertyChangeListener {
 	/**
 	 * Sets up the speedometer for a certain client with an initial speed value
 	 *
-	 * @param client    the client, a Notifiable object
-	 * @param timeValue the initial time value after which the timer runs out of
-	 *                  time.
+	 * @param client
+	 *            the client, a Notifiable object
+	 * @param timeValue
+	 *            the initial time value after which the timer runs out of time.
 	 */
 	public Speedometer(Notifiable client, int speed) {
 		this.client = client;
@@ -32,7 +33,8 @@ public class Speedometer implements PropertyChangeListener {
 	/**
 	 * The timer value could be changed using this method.
 	 *
-	 * @param value the increment (could be negative) for the time value.
+	 * @param value
+	 *            the increment (could be negative) for the time value.
 	 */
 	// public void addTimeValue(int value) {
 	// speed += value;
@@ -57,12 +59,16 @@ public class Speedometer implements PropertyChangeListener {
 	/**
 	 * Setter for the speed value
 	 * 
-	 * @param speed the speed value to be set
+	 * @param speed
+	 *            the speed value to be set
 	 */
 	public void setSpeedValue(int speed) {
 		this.speed = speed;
 	}
 
+	/**
+	 * Changing the state
+	 */
 	@Override
 	public void propertyChange(PropertyChangeEvent arg0) {
 		/*

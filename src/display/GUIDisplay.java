@@ -12,8 +12,10 @@ import javafx.stage.WindowEvent;
 import states.VehicleContext;
 
 /**
- * GUI to implement the VehicleDisplay interface A pretty elementary interface
- *
+ * This class implements VehicleDisplay. The methods in this class are used to
+ * update the GUI for the application.
+ * 
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
  */
 public class GUIDisplay extends Application implements VehicleDisplay {
 	private Button offButton;
@@ -138,7 +140,8 @@ public class GUIDisplay extends Application implements VehicleDisplay {
 	/**
 	 * Display the speed of the vehicle
 	 * 
-	 * @param speed the speed of the vehicle
+	 * @param speed
+	 *            the speed of the vehicle
 	 */
 	@Override
 	public void showVehicleSpeed(int speed) {

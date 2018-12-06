@@ -1,11 +1,21 @@
-
 import display.GUIDisplay;
 import display.VehicleDisplay;
 import javafx.application.Application;
 import states.Clock;
 import states.VehicleContext;
 
+/**
+ * This class contains the main method to launch the GUI for the vehicle display
+ * 
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
+ *
+ */
 public class VehicleMain {
+	/**
+	 * Main method used to launch the application.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Clock.instance();
 		new Thread() {

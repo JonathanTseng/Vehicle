@@ -6,6 +6,8 @@ import speedometer.Speedometer;
 
 /**
  * Represents the braking state
+ * 
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
  *
  */
 public class BrakingState extends VehicleState implements Notifiable {
@@ -68,6 +70,9 @@ public class BrakingState extends VehicleState implements Notifiable {
 		// VehicleContext.instance().showAcceleratorPressed();
 	}
 
+	/**
+	 * Stopping the speedometer.
+	 */
 	@Override
 	public void leave() {
 		speedometer.stop();

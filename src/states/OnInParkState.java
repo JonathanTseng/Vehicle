@@ -3,6 +3,8 @@ package states;
 /**
  * Represents the on in park state
  *
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
+ * 
  */
 public class OnInParkState extends VehicleState {
 	private static OnInParkState instance;
@@ -51,6 +53,10 @@ public class OnInParkState extends VehicleState {
 		VehicleContext.instance().showGearInPark();
 	}
 
+	/**
+	 * Leaving the state.
+	 * 
+	 */
 	@Override
 	public void leave() {
 		// VehicleContext.instance().showVehicleOn();

@@ -1,8 +1,10 @@
 package display;
 
 /**
- * Specifies what the display system should do. Note that the implementation has
- * a lot of freedom to choose its display.
+ * This interface specifies what the display system should do. Note that the
+ * implementation has a lot of freedom to choose its display.
+ * 
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
  */
 public interface VehicleDisplay {
 	/**
@@ -38,7 +40,8 @@ public interface VehicleDisplay {
 	/**
 	 * Displays the speed of the vehicle
 	 * 
-	 * @param speed speed in miles per second (mps)
+	 * @param speed
+	 *            speed in miles per second (mps)
 	 */
 	public void showVehicleSpeed(int speed);
 

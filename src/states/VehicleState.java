@@ -2,6 +2,8 @@ package states;
 
 /**
  * Super class for all states
+ * 
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
  *
  */
 public abstract class VehicleState {

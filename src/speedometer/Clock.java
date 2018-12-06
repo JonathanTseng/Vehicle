@@ -4,10 +4,12 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
 /**
- * Implements a clock as a Runnable. An object adapter that uses
+ * This class implements a clock as a Runnable. An object adapter that uses
  * PropertyChangeSupport to implement the Observable part of the Observer
  * pattern.
- *
+ * 
+ * @author Stephen Thomas, Jose Morales, and Jonathan Tseng
+ * 
  */
 public class Clock implements Runnable {
 	private Thread thread = new Thread(this);
@@ -17,7 +19,8 @@ public class Clock implements Runnable {
 	/**
 	 * Adds a listener
 	 *
-	 * @param listener the listener to be added
+	 * @param listener
+	 *            the listener to be added
 	 */
 	public void addPropertyChangeListener(PropertyChangeListener listener) {
 		this.propertyChangeSupport.addPropertyChangeListener(listener);
@@ -26,7 +29,8 @@ public class Clock implements Runnable {
 	/**
 	 * Removes a listener
 	 *
-	 * @param listener the listener to be removed
+	 * @param listener
+	 *            the listener to be removed
 	 */
 	public void removePropertyChangeListener(PropertyChangeListener listener) {
 		this.propertyChangeSupport.removePropertyChangeListener(listener);
